@@ -2,7 +2,7 @@ import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 
 function GetClassSchedule() {
- const [post,setPost] = useState({})
+ const [posts,setPosts] = useState([])
  const [id, setId] = useState('DES&ANALYS OF ALGOR')
  const [idFromButtonClick, setIdFromButtonClick] = useState(1)
 
@@ -10,8 +10,8 @@ function GetClassSchedule() {
   axios 
    .get(`https://api.peterportal.org/rest/v0/schedule/soc?term=2018%20Fall&department=COMPSCI`)
    .then(res => {
-    console.log(res)
-    setPost(res.data)
+    console.log(res.data.schools[0].departments[0].courses)
+    setPosts(res.data.schools[0].departments[0].courses)
    })
    .catch(err => {
     console.log(err)
@@ -34,7 +34,10 @@ function GetClassSchedule() {
    <button type="button" onClick={handleClick}> Fetch </button>
    <div>
     <ul>
-     <li>{JSON.stringify(post.schools[0].departments[0].courses[0].courseNumber)}</li>
+     {posts.map(post => (
+      <li>{JSON.stringify(post.courseNumber)}</li>
+     ))}
+     
     </ul>
    </div>
    <div> hello </div>
