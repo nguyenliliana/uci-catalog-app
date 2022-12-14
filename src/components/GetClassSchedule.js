@@ -3,7 +3,7 @@ import axios from 'axios'
 
 function GetClassSchedule() {
  const [posts,setPosts] = useState([])
- const [id, setId] = useState('DES&ANALYS OF ALGOR')
+ const [id, setId] = useState('')
  const [idFromButtonClick, setIdFromButtonClick] = useState(1)
 
  useEffect (() => {
@@ -25,7 +25,7 @@ function GetClassSchedule() {
  // }
 
  const handleClick = () => {
-		setIdFromButtonClick("DES&ANALYS OF ALGOR")
+		setIdFromButtonClick(id)
 	}
 
  return (
