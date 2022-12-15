@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import '../schedule.css';
 
 function GetClassSchedule() {
  const [posts,setPosts] = useState([])
@@ -33,20 +34,25 @@ function GetClassSchedule() {
 
  return (
   <div>
-   <label for="dept_input" > Department: </label>
-   <input id="dept_input" type="text" value={dept} onChange={e => setDept(e.target.value)}/>
-   <label for="courseNum_input" > Course Number: </label>
-   <input id="courseNumt_input" type="text" value={courseNum} onChange={e => setCourseNum(e.target.value)}/>
-   <button type="button" onClick={handleClick}> Fetch </button>
+    <div id="form">
+      <label for="dept_input" > Department: </label>
+      <input id="dept_input" type="text" value={dept} onChange={e => setDept(e.target.value)}/>
+      <label for="courseNum_input" > Course Number: </label>
+      <input id="courseNumt_input" type="text" value={courseNum} onChange={e => setCourseNum(e.target.value)}/>
+      <button type="button" onClick={handleClick}> Fetch </button>
+    </div>
    <div>
     <ul>
      {posts.map(post => (
-      <li>Course #/Title: {post.courseNumber}/{post.courseTitle}</li>
+      <li>
+        <div className="courseInfo">
+          <p>Course #/Title: {post.courseNumber}/{post.courseTitle}</p>
+        </div>
+      </li>
      ))}
      
     </ul>
    </div>
-   <div> hello </div>
   </div>
  )
 }
