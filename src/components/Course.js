@@ -8,13 +8,13 @@ function Course({post}) {
       if (section.sectionType == "Lec") {
         return (
         <div>
-          <p>Lecture: Instructor: {JSON.stringify(section.instructors)}</p>
+          {section.instructors.map(i => <p>{section.sectionType}: {i}</p>)}
         </div>
       )
       } else {
         return (
           <div>
-            <p>Section: {JSON.stringify(section.instructors)}</p>
+            {section.instructors.map(i => <p>{section.sectionType}: {i}</p>)}
           </div>
         )
       }
