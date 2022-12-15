@@ -3,12 +3,12 @@ import axios from 'axios'
 
 function GetClassSchedule() {
  const [posts,setPosts] = useState([])
- const [id, setId] = useState('')
- const [idFromButtonClick, setIdFromButtonClick] = useState(1)
+ const [dept, setDept] = useState('COMPSCI')
+ const [deptFromButtonClick, setDeptFromButtonClick] = useState(1)
 
  useEffect (() => {
   axios 
-   .get(`https://api.peterportal.org/rest/v0/schedule/soc?term=2018%20Fall&department=COMPSCI`)
+   .get(`https://api.peterportal.org/rest/v0/schedule/soc?term=2018%20Fall&department=${dept}`)
    .then(res => {
     console.log(res.data.schools[0].departments[0].courses)
     setPosts(res.data.schools[0].departments[0].courses)
@@ -16,7 +16,7 @@ function GetClassSchedule() {
    .catch(err => {
     console.log(err)
    })
- },[idFromButtonClick])
+ },[deptFromButtonClick])
  
  // function convertClassName(id) {
  //  let text = id; 
@@ -25,17 +25,18 @@ function GetClassSchedule() {
  // }
 
  const handleClick = () => {
-		setIdFromButtonClick(id)
+		setDeptFromButtonClick(dept)
 	}
 
  return (
   <div>
-   <input type="text" value={id} onChange={e => setId(e.target.value)}/>
+   <label for="dept_input" > Department: </label>
+   <input id="dept_input" type="text" value={dept} onChange={e => setDept(e.target.value)}/>
    <button type="button" onClick={handleClick}> Fetch </button>
    <div>
     <ul>
      {posts.map(post => (
-      <li>{JSON.stringify(post.courseNumber)}</li>
+      <li>Course #/Title: {post.courseNumber}/{post.courseTitle}</li>
      ))}
      
     </ul>
