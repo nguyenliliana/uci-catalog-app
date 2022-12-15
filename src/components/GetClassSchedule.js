@@ -1,5 +1,6 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
+import Course from "./Course"
 import '../schedule.css';
 
 function GetClassSchedule() {
@@ -44,6 +45,9 @@ function GetClassSchedule() {
     setTermFromButtonClick(urlconfig(term))
  }
 
+
+
+
  return (
   <div>
     <div id="form">
@@ -63,9 +67,7 @@ function GetClassSchedule() {
     <ul>
      {posts.map(post => (
       <li>
-        <div key="{post.courseNumber}" className="courseInfo">
-          <p>Course #/Title: {post.courseNumber}/{post.courseTitle}</p>
-        </div>
+        <Course post={post}/>
       </li>
      ))}
      
