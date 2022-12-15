@@ -47,12 +47,16 @@ function GetClassSchedule() {
  return (
   <div>
     <div id="form">
-      <label for="dept_input" > Term (e.g. 2018 Fall): </label>
-      <input id="dept_input" type="text" value={term} onChange={e => setTerm(e.target.value)}/>
+      <label for="term_input" > Term (e.g. 2018 Fall): </label>
+      <input id="term_input" type="text" value={term} onChange={e => setTerm(e.target.value)}/>
       <label for="dept_input" > Department: </label>
-      <input id="dept_input" type="text" value={dept} onChange={e => setDept(e.target.value)}/>
+      <select id="dept_input" type="text" value={dept} onChange={e => setDept(e.target.value)}>
+        <option value="COMPSCI">COMPSCI</option>
+        <option value="MGMT">MGMT</option>
+        <option value="I%26C SCI">I&C SCI</option>
+      </select>
       <label for="courseNum_input" > Course Number: </label>
-      <input id="courseNumt_input" type="text" value={courseNum} onChange={e => setCourseNum(e.target.value)}/>
+      <input id="courseNum_input" type="text" value={courseNum} onChange={e => setCourseNum(e.target.value)}/>
       <button type="button" onClick={handleClick}> Fetch </button>
     </div>
    <div>
