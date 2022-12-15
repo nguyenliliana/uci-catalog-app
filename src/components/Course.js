@@ -8,7 +8,7 @@ function Course({post}) {
       if (section.sectionType == "Lec") {
         return (
         <div>
-          <p>Lecture: Instructor: {JSON.stringify(section.instructors)}</p>
+          <p>Lecture: {JSON.stringify(section.instructors)}</p>
         </div>
       )
       } else {
