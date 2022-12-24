@@ -16,6 +16,57 @@ input {
  width: 90%;
  border-style: solid; 
  border-width: 1px;
- border-color: black;
- padding: 5px; 
+ border-color: grey;
+ display: flex; 
+ flex-direction: column;
+ justify-content: flex-start; 
+
+}
+
+label {
+ font-weight: bold; 
+}
+
+.lecture {
+ background-color: lightblue;
+ width: 100%;
+ padding: 10px; 
+}
+
+.discussion {
+ background-color: lightyellow;
+ width: 100%;
+ padding: 10px; 
+}
+
+.sections {
+  width: 100%;
+  display: flex; 
+  flex-direction: column; 
+  justify-content: flex-start; 
+}
+
+.section-info{
+ display: flex;
+ justify-content: space-around; 
+}
+
+.section-code {
+ width: 20%; 
+}
+
+.section-meeting {
+ width: 20%; 
+}
+
+.section-location {
+ width: 20%; 
+}
+
+.section-capacity {
+ width: 20%; 
+}
+
+.lecture-instructors {
+ display: flex; 
 }
