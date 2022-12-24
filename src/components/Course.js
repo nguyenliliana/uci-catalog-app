@@ -1,9 +1,11 @@
 import React from 'react'
 
 
-function Course({post}) {
+function Course({post, open}) {
 
   function getSections(sections) {
+    const openOnly = open
+
     return sections.map(function (section){
       if (section.sectionType === "Lec") {
         return (
