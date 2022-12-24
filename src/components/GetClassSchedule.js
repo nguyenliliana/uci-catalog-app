@@ -5,7 +5,7 @@ import Course from "./Course"
 
 function GetClassSchedule() {
  const [posts,setPosts] = useState([])
- const [dept, setDept] = useState("")
+ const [dept, setDept] = useState("COMPSCI")
  const [deptFromButtonClick, setDeptFromButtonClick] = useState(1)
  const [courseNum, setCourseNum] = useState("")
  const [courseNumFromButtonClick, setCourseNumFromButtonClick] = useState(1)
