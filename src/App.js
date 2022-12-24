@@ -1,4 +1,5 @@
 import './App.css';
+import './schedule.css'
 import GetClassSchedule from './components/GetClassSchedule'
 
 function App() {

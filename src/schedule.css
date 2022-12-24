@@ -27,16 +27,16 @@ label {
  font-weight: bold; 
 }
 
-.lecture {
+.courseInfo .lecture {
  background-color: lightblue;
  width: 100%;
- padding: 10px; 
+
 }
 
 .discussion {
  background-color: lightyellow;
  width: 100%;
- padding: 10px; 
+
 }
 
 .sections {
@@ -53,6 +53,7 @@ label {
 
 .section-code {
  width: 20%; 
+
 }
 
 .section-meeting {
@@ -69,4 +70,5 @@ label {
 
 .lecture-instructors {
  display: flex; 
+ margin-left: 10px
 }

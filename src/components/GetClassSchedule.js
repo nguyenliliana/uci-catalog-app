@@ -1,7 +1,7 @@
 import React, {useState, useEffect} from 'react'
 import axios from 'axios'
 import Course from "./Course"
-import '../schedule.css';
+
 
 function GetClassSchedule() {
  const [posts,setPosts] = useState([])
