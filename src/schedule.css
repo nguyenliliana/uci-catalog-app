@@ -70,13 +70,9 @@ label {
 
 .lecture-instructors {
  display: flex; 
-<<<<<<< Updated upstream
  margin-left: 10px
-=======
 }
 
 #open-input {
  display: flex; 
-
->>>>>>> Stashed changes
 }
