@@ -61,6 +61,10 @@ function GetClassSchedule() {
       </select>
       <label for="courseNum_input" > Course Number: </label>
       <input id="courseNum_input" type="text" value={courseNum} onChange={e => setCourseNum(e.target.value)}/>
+      <div id="open-input">
+        <input for="open_input" type="checkbox" />
+        <label for="open_input" > Show Only Open </label>
+      </div>
       <button type="button" onClick={handleClick}> Fetch </button>
     </div>
    <div>
