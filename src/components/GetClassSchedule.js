@@ -70,12 +70,12 @@ const handleChange = () => {
       </div>
       <button type="button" onClick={handleClick}> Fetch </button>
     </div>
-   <div>
+   <div className="results">
     <p> Checked? {checked.toString()}</p>
     <ul>
      {posts.map(post => (
       <li>
-        <Course post={post} open ={checked}/>
+        <Course post={post} checked ={checked}/>
       </li>
      ))}
      
