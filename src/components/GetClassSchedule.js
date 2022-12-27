@@ -50,7 +50,6 @@ const handleChange = () => {
   setChecked(!checked); 
 };
 
-
  return (
   <div>
     <div id="form">

@@ -10,3 +10,7 @@
     font-size: 30px;
     color: white;
 }
+
+#headerTitle {
+    margin-right: 10px; 
+}
