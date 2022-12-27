@@ -71,7 +71,7 @@ const handleChange = () => {
       <button type="button" onClick={handleClick}> Fetch </button>
     </div>
    <div className="results">
-    <p> Checked? {checked.toString()}</p>
+    {/* <p> Checked? {checked.toString()}</p> */}
     <ul>
      {posts.map(post => (
       <li>

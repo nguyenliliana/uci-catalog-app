@@ -3,7 +3,8 @@ import React from 'react'
 function Header() {
   return (
     <div className="header">
-        <h3>Header</h3>
+        <h3>UCI Catalog</h3>
+        <h6>with Peter Portal API</h6>
     </div>
   )
 }
