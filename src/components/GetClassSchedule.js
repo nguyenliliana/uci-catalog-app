@@ -11,6 +11,7 @@ function GetClassSchedule() {
  const [courseNumFromButtonClick, setCourseNumFromButtonClick] = useState(1)
  const [term, setTerm] = useState("")
  const [termFromButtonClick, setTermFromButtonClick] = useState(1)
+ const [checked,setChecked] = useState(false)
 //  const [link, setLink] = useState(`https://api.peterportal.org/rest/v0/schedule/soc`)
 //  const [linkFromButtonClick, setCourseNumFromButtonClick] = useState(1)
 
@@ -45,7 +46,9 @@ function GetClassSchedule() {
     setTermFromButtonClick(urlconfig(term))
  }
 
-
+const handleChange = () => {
+  setChecked(!checked); 
+};
 
 
  return (
@@ -62,16 +65,17 @@ function GetClassSchedule() {
       <label for="courseNum_input" > Course Number: </label>
       <input id="courseNum_input" type="text" value={courseNum} onChange={e => setCourseNum(e.target.value)}/>
       <div id="open-input">
-        <input for="open_input" type="checkbox" />
+        <input for="open_input" type="checkbox" checked={checked} onChange={handleChange}/>
         <label for="open_input" > Show Only Open </label>
       </div>
       <button type="button" onClick={handleClick}> Fetch </button>
     </div>
    <div>
+    <p> Checked? {checked.toString()}</p>
     <ul>
      {posts.map(post => (
       <li>
-        <Course post={post}/>
+        <Course post={post} open ={checked}/>
       </li>
      ))}
      
