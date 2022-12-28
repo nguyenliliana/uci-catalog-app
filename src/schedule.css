@@ -8,8 +8,12 @@
 
 input {
  width: 50%; 
- margin-bottom: 10px; 
+ height: 20px; 
  text-align: center; 
+}
+
+label {
+  margin-top: 10px; 
 }
 
 .courseInfo {
@@ -77,6 +81,8 @@ label {
 
 #open-input {
  display: flex; 
+ flex-direction: row; 
+ white-space: nowrap;
 }
 
 ul {
@@ -93,4 +99,20 @@ ul {
 .courseTitle {
   font-weight: bold; 
   margin-left: 10px; 
+}
+
+#checkbox {
+  margin-top: 12px; 
+  margin-right: 5px; 
+}
+
+button {
+  background-color: #1295D8;
+  color: white; 
+  border-width: 0px; 
+  border-radius: 15px;
+  width: 100px; 
+  height: 35px; 
+  font-size: 20px; 
+  margin-top: 10px; 
 }

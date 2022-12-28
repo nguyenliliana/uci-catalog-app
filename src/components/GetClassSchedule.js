@@ -64,10 +64,10 @@ const handleChange = () => {
       <label for="courseNum_input" > Course Number: </label>
       <input id="courseNum_input" type="text" value={courseNum} onChange={e => setCourseNum(e.target.value)}/>
       <div id="open-input">
-        <input for="open_input" type="checkbox" checked={checked} onChange={handleChange}/>
+        <input id="checkbox" for="open_input" type="checkbox" checked={checked} onChange={handleChange}/>
         <label for="open_input" > Show Only Open </label>
       </div>
-      <button type="button" onClick={handleClick}> Fetch </button>
+      <button type="button" onClick={handleClick}> Search </button>
     </div>
    <div className="results">
     {/* <p> Checked? {checked.toString()}</p> */}
