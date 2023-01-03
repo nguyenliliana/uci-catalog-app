@@ -33,6 +33,11 @@ label {
  font-weight: bold; 
 }
 
+.error-message {
+  color: red;
+  font-weight: bold;
+}
+
 .courseInfo .lecture {
  background-color: lightblue;
  width: 100%;
