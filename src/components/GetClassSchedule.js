@@ -12,6 +12,7 @@ function GetClassSchedule() {
  const [term, setTerm] = useState("")
  const [termFromButtonClick, setTermFromButtonClick] = useState(1)
  const [checked,setChecked] = useState(false)
+ const [errorFound, setError] = useState(false)
 //  const [link, setLink] = useState(`https://api.peterportal.org/rest/v0/schedule/soc`)
 //  const [linkFromButtonClick, setCourseNumFromButtonClick] = useState(1)
 
@@ -21,8 +22,10 @@ function GetClassSchedule() {
    .then(res => {
     console.log(res.data.schools[0].departments[0].courses)
     setPosts(res.data.schools[0].departments[0].courses)
+    setError(false)
    })
    .catch(err => {
+    setError(true)
     console.log(err)
    })
  },[deptFromButtonClick,courseNumFromButtonClick, termFromButtonClick])
@@ -50,6 +53,21 @@ const handleChange = () => {
   setChecked(!checked); 
 };
 
+function getCourses () {
+  if (errorFound) {
+    return (<p>Enter valid filters.</p>)
+  }
+  else {
+    return (
+      posts.map(post => (
+        <li>
+          <Course post={post} checked ={checked}/>
+        </li>
+       ))
+    )
+  }
+}
+
  return (
   <div>
     <div id="form">
@@ -72,11 +90,8 @@ const handleChange = () => {
    <div className="results">
     {/* <p> Checked? {checked.toString()}</p> */}
     <ul>
-     {posts.map(post => (
-      <li>
-        <Course post={post} checked ={checked}/>
-      </li>
-     ))}
+      {getCourses()}
+      
      
     </ul>
    </div>
