@@ -1,0 +1,13 @@
+{
+  "files": {
+    "main.css": "/uci-catalog-app/static/css/main.d3c2f570.css",
+    "main.js": "/uci-catalog-app/static/js/main.c8099cb7.js",
+    "index.html": "/uci-catalog-app/index.html",
+    "main.d3c2f570.css.map": "/uci-catalog-app/static/css/main.d3c2f570.css.map",
+    "main.c8099cb7.js.map": "/uci-catalog-app/static/js/main.c8099cb7.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.d3c2f570.css",
+    "static/js/main.c8099cb7.js"
+  ]
+}
