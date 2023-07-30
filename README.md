@@ -1,3 +1,3 @@
-# uci-catalog-app (In-Progress)
+# uci-catalog-app 
 
 ## Collaborators: Liliana & Leanne Nguyen 
